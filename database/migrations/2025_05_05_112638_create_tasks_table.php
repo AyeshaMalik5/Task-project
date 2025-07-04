@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('code')->unique();
             $table->string('category');
-  $table->string('status')->default('pending')->after('category');
+  $table->string('status')->default('pending');
             $table->timestamps();
         });
     }
