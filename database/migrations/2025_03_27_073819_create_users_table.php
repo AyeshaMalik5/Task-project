@@ -16,8 +16,11 @@
                     $table->string('name'); // User name
                     $table->string('email')->unique(); // Unique email
                     $table->string('password'); // Password (hashed)
-                    $table->string('role'); // User role (e.g., admin, employee)
+                    $table->string('role')->     default('Employee');; // User role (e.g., admin, employee)
                     $table->timestamps(); // Created_at & Updated_at timestamps
+                    $table->timestamp('email_verified_at')->nullable();
+                    $table->rememberToken();
+              
                 });
             }
         
